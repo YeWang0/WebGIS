@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>login.html</title>
+	
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=gb2312">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+<style>
+body{
+	
+}
+#login  
+{  
+	background-color:white;
+	margin-left:60%;
+	margin-top:18%;
+    box-shadow:  
+          0 0 2px rgba(0, 0, 0, 0.2)  ,  
+          0 1px 1px rgba(0, 0, 0, .2)  ,  
+          0 3px 0 #fff  ,  
+          0 4px 0 rgba(0, 0, 0, .2)  ,  
+          0 6px 0 #fff  ,  
+          0 7px 0 rgba(0, 0, 0, .2)  ;  
+} 
+#login  
+{  
+    position: absolute;  
+    z-index: 0;  
+}  
+ 
+#login:before  
+{  
+    content: '';  
+    position: absolute;  
+    z-index: -1;  
+    border: 1px dashed #ccc  ;  
+    top: 5px;  
+    bottom: 5px;  
+    left: 5px;  
+    right: 5px;  
+    -moz-box-shadow: 0 0 0 1px #fff  ;  
+    -webkit-box-shadow: 0 0 0 1px #fff  ;  
+    box-shadow: 0 0 0 1px #fff  ;  
+} 
+h1  
+{  
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .7)  , 0px 2px 0 rgba(0, 0, 0, .5)  ;  
+    text-transform: uppercase;  
+    text-align: center;  
+    color: #666  ;  
+    margin: 0 0 30px 0;  
+    letter-spacing: 4px;  
+    font: normal 26px/1 Verdana, Helvetica;  
+    position: relative;  
+}  
+ 
+h1:after, h1:before  
+{  
+    background-color: #777  ;  
+    content: "";  
+    height: 1px;  
+    position: absolute;  
+    top: 15px;  
+    width: 120px;  
+}  
+ 
+h1:after  
+{  
+    background-image: -webkit-gradient(linear, left top, right top, from(#777  ), to(#fff  ));  
+    background-image: -webkit-linear-gradient(left, #777  , #fff  );  
+    background-image: -moz-linear-gradient(left, #777  , #fff  );  
+    background-image: -ms-linear-gradient(left, #777  , #fff  );  
+    background-image: -o-linear-gradient(left, #777  , #fff  );  
+    background-image: linear-gradient(left, #777  , #fff  );  
+    right: 0;  
+}  
+ 
+h1:before  
+{  
+    background-image: -webkit-gradient(linear, right top, left top, from(#777  ), to(#fff  ));  
+    background-image: -webkit-linear-gradient(right, #777  , #fff  );  
+    background-image: -moz-linear-gradient(right, #777  , #fff  );  
+    background-image: -ms-linear-gradient(right, #777  , #fff  );  
+    background-image: -o-linear-gradient(right, #777  , #fff  );  
+    background-image: linear-gradient(right, #777  , #fff  );  
+    left: 0;  
+} 
+#d1{
+	margin-left:11%;
+	margin-top:11%;
+	padding-left:20px;
+	padding-right:20px;
+	float:left;
+	background-color:silver;
+}
+h2{
+	font-family : 楷体;
+	font-size : 3em;
+	color : #fff;
+	
+}
+
+</style>
+  </head>
+  
+  <body style="background-image:url(background3.jpg);background-size:100%;">
+  <div id="d1" style="width: 500px; "><h2> WebGIS物联网跟踪系统  </h2></div>
+  	
+    <form id="login" action="loginjudge.jsp"> 
+    <h1>Log In</h1> 
+    <fieldset id="inputs"> 
+        Username: <input name="username" type="text" placeholder="Username" autofocus required>
+        <br/> 
+       	Password: <input name="password" type="password" placeholder="Password" required> 
+    </fieldset> 
+    <fieldset id="actions"> 
+        <input type="submit" id="submit" value="Log in"> 
+        <a href="">Register</a> 
+    </fieldset> 
+</form>
+  </body>
+  <script language="javascript"> 
+  	var src = window.location.href;
+  	if(src.match("fail")){
+  	alert("登录失败，请重试！");
+  	}
+  </script>
+</html>
